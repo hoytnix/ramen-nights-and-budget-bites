@@ -1,0 +1,32 @@
+# Progress: Ramen Nights & Budget Bites
+
+## What Works
+- **Core Game Loop**:
+  - Manual bowl clicking with particle bursts and sound/visual feedback hooks.
+  - Heartbeat tick system running at 1000ms intervals, incrementing IGT by 10 minutes per tick.
+  - Net income calculation (passive earnings minus daily staff salaries & district rent).
+- **Districts & Ascension**:
+  - 4 Districts: Hongo Area, Shibuya Cross, Shinjuku Nights, Ginza Palace.
+  - District unlock requirements (Yen and Academic Reputation).
+  - Ascension soft-reset mechanism with permanent trophy perks (+50% YPS each).
+- **Economy & Progression**:
+  - 10 Classmate staff tiers with exponential scaling.
+  - 9 Kitchen machinery upgrades with exponential multipliers.
+  - 20 Ramen recipes with distinct base values and situational bonuses.
+  - 8 Decor themes (Classic, seasonal variants, Cyberpunk, Matcha, Royal Ginza).
+  - Consumable items with active buff durations.
+- **Narrative & Dynamic Systems**:
+  - 15 Weather conditions with day/night and seasonal availability gates.
+  - Cutscene dialog modal system with branching options and state callbacks.
+  - Procedural and milestone quest system rewarding Academic Reputation.
+- **Persistence**:
+  - Automatic single-key `ramen_nights_ultimate_save` LocalStorage serialization and rehydration.
+
+## Current Roadmap & Potential Improvements
+- [ ] Sound & Music system (retro 8-bit chiptune audio/SFX for bowl clicks, level ups, cash registers).
+- [ ] Additional storyline cutscenes exploring classmate backstories and district boss encounters.
+- [ ] Minigames for broth seasoning or noodle straining.
+- [ ] Export/Import save game data functionality for cross-device support.
+
+## Known Issues / Backlog
+- None identified in base engine; build and typecheck pass cleanly.
