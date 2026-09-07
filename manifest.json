@@ -1,0 +1,68 @@
+{
+  "name": "Ramen Nights & Budget Bites",
+  "short_name": "Ramen Nights",
+  "id": "com.ramennights.game",
+  "start_url": "https://zingy-donut-abf775.netlify.app/?source=pwa",
+  "description": "A JRPG-styled idle clicker game about ramen and graduation.",
+  "display": "standalone",
+  "background_color": "#1a1313",
+  "theme_color": "#1a1313",
+  "orientation": "any",
+  "categories": [
+    "games",
+    "simulation",
+    "entertainment",
+    "casual"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Gameplay Desktop"
+    },
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Gameplay Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Cooking",
+      "short_name": "Cook",
+      "description": "Jump straight into the kitchen",
+      "url": "/?action=cook",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
