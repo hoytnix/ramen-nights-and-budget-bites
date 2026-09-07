@@ -19,8 +19,10 @@
   - 15 Weather conditions with day/night and seasonal availability gates.
   - Cutscene dialog modal system with branching options and state callbacks.
   - Procedural and milestone quest system rewarding Academic Reputation.
-- **Persistence**:
-  - Automatic single-key `ramen_nights_ultimate_save` LocalStorage serialization and rehydration.
+- **Documentation & Architecture**:
+  - `GEMINI.md` system laws, architecture invariants, and operational workflows.
+  - Core `/memory-bank/` files fully synchronized.
+  - Comprehensive `README.md` with ASCII art, lore, mechanics tables, and setup instructions.
 
 ## Current Roadmap & Potential Improvements
 - [ ] Sound & Music system (retro 8-bit chiptune audio/SFX for bowl clicks, level ups, cash registers).
