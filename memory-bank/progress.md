@@ -29,6 +29,11 @@
   - Fire OS compatibility verified (`minSdkVersion: 24`, zero hard Google Play Services dependencies).
   - Diagnostic environment validator (`scripts/check-android-env.sh`) for JDK 17+ and Android SDK.
   - One-touch APK build script (`scripts/build-android.sh`) and npm run scripts (`cap:sync`, `android:check`, `android:build`).
+- **Web & Itch.io Deployment**:
+  - Configured Vite `base: './'` for relative asset resolution inside subpaths and iframes.
+  - Configured `public/` directory hosting `sw.js`, `manifest.json`, and icons (`icon-192.png`, `icon-512.png`).
+  - Added iframe guard to Service Worker registration to eliminate sandboxed iframe errors.
+  - Added `pnpm run package:itch` script to generate a ready-to-upload `itch-deploy.zip`.
 
 ## Current Roadmap & Potential Improvements
 - [ ] Sound & Music system (retro 8-bit chiptune audio/SFX for bowl clicks, level ups, cash registers).

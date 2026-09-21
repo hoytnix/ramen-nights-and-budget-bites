@@ -175,7 +175,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-[#1a1313]">
     <div id="rotate-overlay">
@@ -185,7 +184,8 @@
     </div>
     <div id="root"></div>
     <script>
-      if ('serviceWorker' in navigator) {
+      // Avoid service worker registration inside cross-origin sandboxed iframes (e.g. Itch.io)
+      if ('serviceWorker' in navigator && window.self === window.top) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('./sw.js')
             .then(registration => {

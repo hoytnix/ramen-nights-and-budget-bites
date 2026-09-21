@@ -1,20 +1,19 @@
 # Active Context: Ramen Nights & Budget Bites
 
 ## Current Status & Focus
+- Fixed Itch.io HTML5 deployment 404s and sandbox Service Worker issues.
 - Configured Capacitor 8 native Android layer targeting Amazon Kindle Fire OS.
-- Initialized official architectural mandate and memory bank.
 - Core game foundation is active with complete gameplay loop across web and mobile packaging.
 
 ## Active Work Stream
-- Integrated `@capacitor/core`, `@capacitor/android`, and `@capacitor/cli`.
-- Generated and validated `capacitor.config.ts` mapping webDir to `dist/` with HTTPS scheme for Android.
-- Initialized native Android platform layer via `npx cap add android` with `android/gradlew` provisioned with executable permissions.
-- Verified Amazon Kindle Fire OS compatibility (`minSdkVersion 24`, zero hard Google Play Services dependencies).
-- Created automated environment validation script (`scripts/check-android-env.sh`) and unified build workflow script (`scripts/build-android.sh`) with `--skip-check` support.
-- Updated package instructions for Debian 13 (`openjdk-21-jdk`).
-- Updated `package.json` with `cap:sync`, `android:check`, and `android:build` commands.
+- Added `base: './'` to [vite.config.ts](file:///home/oloty/Dev/ramen-nights-and-budget-bites/vite.config.ts) for nested subpath and iframe compatibility on Itch.io.
+- Removed nonexistent `/index.css` reference in [index.html](file:///home/oloty/Dev/ramen-nights-and-budget-bites/index.html).
+- Established [public/](file:///home/oloty/Dev/ramen-nights-and-budget-bites/public) directory populated with `sw.js`, `manifest.json`, and app icons (`icon-192.png`, `icon-512.png`).
+- Guarded Service Worker registration in [index.html](file:///home/oloty/Dev/ramen-nights-and-budget-bites/index.html) (`window.self === window.top`) to avoid sandboxed iframe errors in Itch.io.
+- Added `package:itch` npm script in [package.json](file:///home/oloty/Dev/ramen-nights-and-budget-bites/package.json) to generate ready-to-upload `itch-deploy.zip`.
 
 ## Recent State Changes
-- Enhanced `scripts/check-android-env.sh` and `scripts/build-android.sh` to support Debian 13 Trixie package targets and `--skip-check` flag.
-- Validated preflight failure behavior on host environments lacking Java 17+ or Android SDK.
+- Resolved Itch.io deployment failure (404 on assets, manifest, and service worker registration failure).
+- Added `*.zip` to [.gitignore](file:///home/oloty/Dev/ramen-nights-and-budget-bites/.gitignore).
+- Validated build via `pnpm run package:itch` and typechecks via `pnpm exec tsc --noEmit`.
 - Updated Memory Bank and synchronized documentation.

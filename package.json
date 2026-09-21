@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "package:itch": "vite build && (cd dist && rm -f ../itch-deploy.zip && zip -r ../itch-deploy.zip .)",
     "cap:sync": "vite build && cap sync android",
     "cap:open": "cap open android",
     "android:check": "bash scripts/check-android-env.sh",
