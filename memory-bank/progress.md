@@ -23,6 +23,12 @@
   - `GEMINI.md` system laws, architecture invariants, and operational workflows.
   - Core `/memory-bank/` files fully synchronized.
   - Comprehensive `README.md` with ASCII art, lore, mechanics tables, and setup instructions.
+- **Mobile Platform & Fire OS Support**:
+  - Capacitor 8 core and android integration (`@capacitor/core`, `@capacitor/android`, `@capacitor/cli`).
+  - Native `android/` directory initialized with Gradle wrapper (`android/gradlew`) with executable permissions.
+  - Fire OS compatibility verified (`minSdkVersion: 24`, zero hard Google Play Services dependencies).
+  - Diagnostic environment validator (`scripts/check-android-env.sh`) for JDK 17+ and Android SDK.
+  - One-touch APK build script (`scripts/build-android.sh`) and npm run scripts (`cap:sync`, `android:check`, `android:build`).
 
 ## Current Roadmap & Potential Improvements
 - [ ] Sound & Music system (retro 8-bit chiptune audio/SFX for bowl clicks, level ups, cash registers).

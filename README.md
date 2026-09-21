@@ -190,6 +190,32 @@ pnpm run build
 pnpm run preview
 ```
 
+### 📱 Android & Amazon Kindle Fire OS (Capacitor)
+
+The project includes full support for building an Android APK tailored for **Amazon Kindle Fire OS** (Fire OS 6, 7, and 8+).
+
+1. **Verify Toolchain Prerequisites**:
+   ```bash
+   # Checks Java (JDK 17+), Android SDK, gradlew permissions, and Fire OS settings
+   pnpm run android:check
+   # or: bash scripts/check-android-env.sh
+   ```
+2. **Compile Web & Sync Capacitor Layer**:
+   ```bash
+   pnpm run cap:sync
+   ```
+3. **Assemble Debug APK**:
+   ```bash
+   # End-to-end build script (compile web + sync + assemble APK via Gradle wrapper)
+   pnpm run android:build
+   # or directly with gradlew:
+   cd android && ./gradlew assembleDebug
+   ```
+4. **Sideload to Kindle Fire Device**:
+   ```bash
+   adb install -r android/app/build/outputs/apk/debug/app-debug.apk
+   ```
+
 ---
 
 ## 📂 Project Directory Structure
