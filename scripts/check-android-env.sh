@@ -150,11 +150,12 @@ else
     echo ""
     echo -e "${BOLD}How to configure missing requirements:${NC}"
     echo ""
-    echo -e "1. ${BOLD}Install OpenJDK 17 or 21:${NC}"
-    echo -e "   - Ubuntu/Debian: ${YELLOW}sudo apt-get update && sudo apt-get install -y openjdk-17-jdk${NC}"
-    echo -e "   - Fedora:        ${YELLOW}sudo dnf install -y java-17-openjdk-devel${NC}"
-    echo -e "   - Arch Linux:    ${YELLOW}sudo pacman -S jdk17-openjdk${NC}"
-    echo -e "   - macOS:         ${YELLOW}brew install openjdk@17${NC}"
+    echo -e "1. ${BOLD}Install OpenJDK 17 or 21:${NC}
+   - Debian 13 / Ubuntu 24+: ${YELLOW}sudo apt-get update && sudo apt-get install -y openjdk-21-jdk${NC}
+   - Debian 11/12 / Ubuntu 22: ${YELLOW}sudo apt-get update && sudo apt-get install -y openjdk-17-jdk${NC}
+   - Fedora:                  ${YELLOW}sudo dnf install -y java-21-openjdk-devel${NC}
+   - Arch Linux:              ${YELLOW}sudo pacman -S jdk-openjdk${NC}
+   - macOS:                   ${YELLOW}brew install openjdk@21${NC}"
     echo ""
     echo -e "2. ${BOLD}Install Android Command Line Tools / SDK:${NC}"
     echo -e "   Download commandlinetools from https://developer.android.com/studio#command-line-tools-only"

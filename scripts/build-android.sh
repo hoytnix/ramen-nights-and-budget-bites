@@ -26,10 +26,21 @@ echo ""
 # ------------------------------------------------------------------------------
 # 1. Environment Verification
 # ------------------------------------------------------------------------------
-echo -e "${BOLD}[Step 1/4] Verifying Host Environment...${NC}"
-if ! bash "$SCRIPT_DIR/check-android-env.sh"; then
-    echo -e "${RED}Error: Pre-requisites not satisfied. Please resolve missing tools above before building.${NC}"
-    exit 1
+SKIP_CHECK=false
+for arg in "$@"; do
+    if [[ "$arg" == "--skip-check" ]]; then
+        SKIP_CHECK=true
+    fi
+done
+
+if [[ "$SKIP_CHECK" == "true" ]]; then
+    echo -e "${YELLOW}[Step 1/4] Skipping Host Environment Check (--skip-check passed)...${NC}"
+else
+    echo -e "${BOLD}[Step 1/4] Verifying Host Environment...${NC}"
+    if ! bash "$SCRIPT_DIR/check-android-env.sh"; then
+        echo -e "${RED}Error: Pre-requisites not satisfied. Please resolve missing tools above before building.${NC}"
+        exit 1
+    fi
 fi
 
 # ------------------------------------------------------------------------------
