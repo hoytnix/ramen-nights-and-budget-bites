@@ -39,8 +39,8 @@
 - **SEO, LLM Discovery & Social Rich Embeds**:
   - Generated 1200x630 pixel art JRPG cover image (`public/cover.png`, `public/cover.jpg`).
   - Implemented ASCII-art themed `public/robots.txt` supporting standard search engines and AI agents.
-  - Authored comprehensive `public/llms.txt` documenting gameplay, mathematical formulas, and tech architecture for LLMs.
-  - Structured schema.org JSON-LD graph (`VideoGame`, `WebApplication`) and OpenGraph/Twitter Card meta tags in `index.html`.
+  - Authored comprehensive `public/llms.txt` documenting gameplay, mathematical formulas, and tech architecture for LLMs with TehWiz Productions attribution.
+  - Structured Schema.org JSON-LD graph (`Organization`, `VideoGame`, `WebApplication`) with TehWiz Productions (`tehwiz.com`) as publisher, creator, and producer, alongside OpenGraph/Twitter Card meta tags in `index.html`.
   - Added `public/sitemap.xml` for site indexing.
 
 ## Current Roadmap & Potential Improvements

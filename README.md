@@ -263,4 +263,4 @@ ramen-nights-and-budget-bites/
 
 Distributed under the **MIT License**. See `LICENSE` for details.
 
-*Crafted with 🍜, caffeine, and late nights at Tokyo Hodai University.*
+*Developed & published by **[TehWiz Productions](https://tehwiz.com)**. Crafted with 🍜, caffeine, and late nights at Tokyo Hodai University.*

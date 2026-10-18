@@ -4,6 +4,7 @@
 
 ## Overview & Narrative Premise
 - **Title**: Ramen Nights & Budget Bites
+- **Developer & Publisher**: TehWiz Productions ([tehwiz.com](https://tehwiz.com))
 - **Genre**: Incremental / Idle Clicker / JRPG Business Simulation
 - **Setting**: Tokyo Hodai University and the streets of Tokyo (Hongo Area, Shibuya Cross, Shinjuku Nights, Ginza Palace).
 - **Protagonist**: An ambitious university student enrolled in Economics 301 ("Applied Market Dynamics through Culinary Entrepreneurship") taught by the eccentric Professor X.
