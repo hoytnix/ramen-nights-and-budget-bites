@@ -247,9 +247,12 @@ ramen-nights-and-budget-bites/
 ├── constants.tsx                # Districts, recipes, classmate scaling, weather
 ├── types.ts                     # TypeScript game model definitions
 ├── story.tsx                    # Narrative cutscene script & choice nodes
+├── public/                      # Static assets for PWA & web deployment
+│   ├── manifest.json            # PWA web app manifest (relative paths)
+│   ├── sw.js                    # Offline-first Service Worker
+│   ├── icon-192.png             # PWA app icon (192x192)
+│   └── icon-512.png             # PWA app icon (512x512)
 ├── index.html                   # Entry HTML with scanlines and pixel font imports
-├── manifest.json                # PWA web app manifest
-├── sw.js                        # Offline-first Service Worker
 ├── GEMINI.md                    # Project operational mandate & system laws
 └── vite.config.ts               # Vite bundler configuration
 ```

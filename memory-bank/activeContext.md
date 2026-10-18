@@ -1,19 +1,17 @@
 # Active Context: Ramen Nights & Budget Bites
 
 ## Current Status & Focus
-- Fixed Itch.io HTML5 deployment 404s and sandbox Service Worker issues.
-- Configured Capacitor 8 native Android layer targeting Amazon Kindle Fire OS.
+- Configured relative paths for PWA Manifest, icons, and Service Worker registration (`./manifest.json`, `./sw.js`) for seamless GitHub Pages subpath deployment.
+- Cleaned up legacy root `manifest.json` and `sw.js` in favor of canonical `public/` assets.
 - Core game foundation is active with complete gameplay loop across web and mobile packaging.
 
 ## Active Work Stream
-- Added `base: './'` to [vite.config.ts](file:///home/oloty/Dev/ramen-nights-and-budget-bites/vite.config.ts) for nested subpath and iframe compatibility on Itch.io.
-- Removed nonexistent `/index.css` reference in [index.html](file:///home/oloty/Dev/ramen-nights-and-budget-bites/index.html).
-- Established [public/](file:///home/oloty/Dev/ramen-nights-and-budget-bites/public) directory populated with `sw.js`, `manifest.json`, and app icons (`icon-192.png`, `icon-512.png`).
-- Guarded Service Worker registration in [index.html](file:///home/oloty/Dev/ramen-nights-and-budget-bites/index.html) (`window.self === window.top`) to avoid sandboxed iframe errors in Itch.io.
-- Added `package:itch` npm script in [package.json](file:///home/oloty/Dev/ramen-nights-and-budget-bites/package.json) to generate ready-to-upload `itch-deploy.zip`.
+- Verified and ensured relative paths (`./manifest.json`, `./icon-192.png`, `./sw.js`) in `index.html` preventing GitHub Pages subpath 404s.
+- Removed legacy root `manifest.json` and `sw.js` so Vite builds cleanly output `public/manifest.json` without asset duplication.
+- Maintained Service Worker iframe guard (`window.self === window.top`) for sandbox environments (Itch.io).
 
 ## Recent State Changes
-- Resolved Itch.io deployment failure (404 on assets, manifest, and service worker registration failure).
-- Added `*.zip` to [.gitignore](file:///home/oloty/Dev/ramen-nights-and-budget-bites/.gitignore).
-- Validated build via `pnpm run package:itch` and typechecks via `pnpm exec tsc --noEmit`.
-- Updated Memory Bank and synchronized documentation.
+- Updated `index.html` manifest and icon link tags to use explicit `./` relative paths.
+- Removed root `manifest.json` and root `sw.js`.
+- Verified production build and GitHub Pages deployment workflow compatibility.
+

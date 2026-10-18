@@ -29,9 +29,11 @@
   - Fire OS compatibility verified (`minSdkVersion: 24`, zero hard Google Play Services dependencies).
   - Diagnostic environment validator (`scripts/check-android-env.sh`) for JDK 17+ and Android SDK.
   - One-touch APK build script (`scripts/build-android.sh`) and npm run scripts (`cap:sync`, `android:check`, `android:build`).
-- **Web & Itch.io Deployment**:
-  - Configured Vite `base: './'` for relative asset resolution inside subpaths and iframes.
+- **Web, GitHub Pages & Itch.io Deployment**:
+  - Configured Vite `base: './'` for relative asset resolution inside subpaths (GitHub Pages) and iframes (Itch.io).
   - Configured `public/` directory hosting `sw.js`, `manifest.json`, and icons (`icon-192.png`, `icon-512.png`).
+  - Set explicit relative paths (`./manifest.json`, `./sw.js`, `./icon-192.png`) in `index.html` preventing 404s on subpath root lookup.
+  - Removed deprecated root-level duplicate `manifest.json` and `sw.js`.
   - Added iframe guard to Service Worker registration to eliminate sandboxed iframe errors.
   - Added `pnpm run package:itch` script to generate a ready-to-upload `itch-deploy.zip`.
 
