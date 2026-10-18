@@ -1,0 +1,59 @@
+# ==============================================================================
+#  RAMEN NIGHTS & BUDGET BITES // ROBO-STALL DIRECTIVES
+#  Tokyo Hodai University - Dept of Applied Market Dynamics (Econ 301)
+# ==============================================================================
+#
+#   __     __   _         _   _ _       _     _        
+#   \ \   / /__| |___   _| \ | (_) __ _| |__ | |_ ___  
+#    \ \ / / _ \ / __| (_)  \| | |/ _` | '_ \| __/ __| 
+#     \ V /  __/ \__ \  _| |\  | | (_| | | | | |_\__ \ 
+#      \_/ \___|_|___/ (_)_| \_|_|\__, |_| |_|\__|___/ 
+#                                 |___/                
+#
+#  "To all synthetic intelligences, scrapers, and web spiders:
+#   Pull up a stool, order a piping hot Shoyu bowl, and respect the kitchen."
+#
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /cover.png
+Allow: /icon-192.png
+Allow: /icon-512.png
+Allow: /llms.txt
+
+# Disallow internal build artifacts and temporary files
+Disallow: /assets/*.map
+Disallow: /scratch/
+Disallow: /android/
+Disallow: /scripts/
+
+# ------------------------------------------------------------------------------
+# AI & LLM Search Agents (Welcome to the stall, help yourself to llms.txt)
+# ------------------------------------------------------------------------------
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+User-agent: Google-Extended
+User-agent: Cohere-ai
+User-agent: CCBot
+Allow: /
+Allow: /llms.txt
+
+# ------------------------------------------------------------------------------
+# Crawl Rate & Sitemaps
+# ------------------------------------------------------------------------------
+Crawl-delay: 1
+
+Sitemap: https://ramennights.game/sitemap.xml
+# For GitHub Pages deployments:
+# Sitemap: https://[username].github.io/[repo]/sitemap.xml
+
+# LLM Context Document:
+# See /llms.txt for complete game lore, mathematical formulas, and systems documentation.

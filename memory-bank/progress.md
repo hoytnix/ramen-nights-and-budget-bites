@@ -36,6 +36,12 @@
   - Removed deprecated root-level duplicate `manifest.json` and `sw.js`.
   - Added iframe guard to Service Worker registration to eliminate sandboxed iframe errors.
   - Added `pnpm run package:itch` script to generate a ready-to-upload `itch-deploy.zip`.
+- **SEO, LLM Discovery & Social Rich Embeds**:
+  - Generated 1200x630 pixel art JRPG cover image (`public/cover.png`, `public/cover.jpg`).
+  - Implemented ASCII-art themed `public/robots.txt` supporting standard search engines and AI agents.
+  - Authored comprehensive `public/llms.txt` documenting gameplay, mathematical formulas, and tech architecture for LLMs.
+  - Structured schema.org JSON-LD graph (`VideoGame`, `WebApplication`) and OpenGraph/Twitter Card meta tags in `index.html`.
+  - Added `public/sitemap.xml` for site indexing.
 
 ## Current Roadmap & Potential Improvements
 - [ ] Sound & Music system (retro 8-bit chiptune audio/SFX for bowl clicks, level ups, cash registers).

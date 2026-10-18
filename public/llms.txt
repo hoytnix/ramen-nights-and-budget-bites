@@ -1,0 +1,75 @@
+# Ramen Nights & Budget Bites
+
+> A JRPG-styled idle clicker & culinary management simulation set at Tokyo Hodai University. Players balance liquid operating cash (Yen) and academic prestige (Academic Reputation) to scale a late-night noodle cart into a Tokyo-wide ramen empire to graduate from Economics 301.
+
+## Overview & Narrative Premise
+- **Title**: Ramen Nights & Budget Bites
+- **Genre**: Incremental / Idle Clicker / JRPG Business Simulation
+- **Setting**: Tokyo Hodai University and the streets of Tokyo (Hongo Area, Shibuya Cross, Shinjuku Nights, Ginza Palace).
+- **Protagonist**: An ambitious university student enrolled in Economics 301 ("Applied Market Dynamics through Culinary Entrepreneurship") taught by the eccentric Professor X.
+- **Goal**: Reach the wealth and Academic Reputation required to expand through all 4 districts, satisfy the capstone curriculum, and graduate before the academic year ends.
+
+## Core Gameplay Loop
+1. **Manual Bowl Serving**: Tapping the ramen bowl earns Yen based on the active recipe's base value multiplied by Academic Reputation scaling and active temporary buffs.
+2. **Passive Automation (Classmates)**: Recruit 10 classmates from diverse academic departments (Engineering, Chemistry, Art, Law, CompSci, etc.) to automate bowl production and generate passive Yen Per Second (YPS).
+3. **Kitchen Hardware Upgrades**: Exponentially multiply kitchen efficiency through culinary machinery (from Induction Burners and Pressure Broth Extractors to Sub-Atomic Noodle Weavers).
+4. **Culinary R&D (Menu)**: Research 20 distinct ramen recipes ranging from budget student fare (Classic Shoyu) to mythical elixirs (Void Broth, The Omni). Broths trigger conditional bonuses based on real-time weather and the day/night cycle.
+5. **Operating Overhead**: Every tick deducts prorated operating expenses (daily district stall rent + classmate salaries), requiring strategic cash-flow management.
+6. **Ascension (District Expansion)**: Accumulate required Yen and Academic Reputation to challenge district milestones, soft-resetting local stall level in exchange for permanent compounding district Trophies (+50% passive YPS per trophy).
+
+## Mathematical Progression Formulas
+- **Classmate Hire Cost**: `floor(baseCost * (1.5 ^ level))`
+- **Kitchen Upgrade Cost**: `floor(baseCost * (4.0 ^ level))`
+- **Consumable Item Cost**: `floor(baseCost * (1.8 ^ count))`
+- **Shop Rank Promotion Threshold**: `floor(10000 * (2.2 ^ (rank - 1)))`
+- **Shop Rank Reward**: `floor(50000 * (2.5 ^ (rank - 1)))`
+- **Manual Click Power**: `baseRecipeValue * (1 + (academicRep * 0.0001)) * buffMultipliers`
+- **District Trophy Multiplier**: `1 + (trophiesCount * 0.5)` (compounds additively across ascensions)
+- **Engine Heartbeat**: 1000ms deterministic tick interval (`hooks/useGameSystems.ts`). Each tick advances in-game time by 10 minutes (144 ticks = 1 in-game day).
+
+## University Classmate Roster
+1. **Haruto (Engineering)**: Calibrates burner heat and automates initial bowl prep.
+2. **Aoi (Chemistry)**: Formulates umami-maximizing alkaline noodle salts.
+3. **Kenji (Art & Design)**: Designs eye-catching stall banners and retro neon signs.
+4. **Mei (Law)**: Negotiates sidewalk permits and slashes district rent overhead.
+5. **Daiki (Mathematics)**: Optimizes ingredient supply curves and batch yields.
+6. **Yuki (Economics)**: Analyzes student foot-traffic patterns and dynamic pricing.
+7. **Rin (Biology)**: Cultures artisanal koji molds and slow-fermented tare.
+8. **Sora (Athletics)**: High-speed dishwashing and rapid-fire bowl plating.
+9. **Ren (Computer Science)**: Builds algorithmic noodle extruders and queue schedulers.
+10. **Sensei (Tenure Faculty)**: Grants peer-reviewed academic prestige and institutional grants.
+
+## Tokyo Districts (Ascension Ladder)
+1. **Hongo Area (University Campus)**: Ground zero. Student crowds, low rent, humble wooden cart.
+2. **Shibuya Cross**: Bustling tourist hub, intense nightlife rushes, high foot traffic.
+3. **Shinjuku Nights**: Neon labyrinth, corporate salarymen, midnight broth demands.
+4. **Ginza Palace**: High-end culinary cathedral, Michelin-tier clientele, opulent royal decor.
+
+## Broth Recipes & Synergies
+- **Classic Shoyu**: Reliable student baseline.
+- **Rich Tonkotsu**: 2.5x night synergy (22:00 - 04:00).
+- **Spicy Miso**: 2.0x winter and snowstorm synergy.
+- **Yuzu Shio**: 1.8x summer refresh bonus.
+- **Curry Ramen**: 2.0x rain and thunderstorm synergy.
+- **Black Garlic Oil**: Extreme night multiplier.
+- **Truffle Shoyu**: High-end Ginza district synergy.
+- **Void Broth & The Omni**: Mythical cosmic recipes granting massive global yield multipliers.
+
+## Dynamic Environmental Engine
+- **15 Weather Types**: Clear, Cloudy, Light Rain, Heavy Rain, Thunderstorm, Snow, Blizzard, Fog, Cherry Blossoms (Spring), Heatwave (Summer), Autumn Leaves, Aurora, Sandstorm, etc.
+- **Day/Night Cycle**: Night hours (22:00 to 04:00) grant an automatic +30% baseline revenue boost.
+- **Seasons**: Real-time calendar derived from in-game date starting September 1, 2025.
+
+## Technology Architecture
+- **Framework**: React 19 + TypeScript 5.8 + Vite 6
+- **Styling**: Tailwind CSS with custom pixel typography (`Press Start 2P`, `DotGothic16`) and scanline CRT shaders.
+- **PWA**: Fully functional offline-first Progressive Web App (`public/manifest.json`, `public/sw.js`).
+- **Storage**: Client-side single-key LocalStorage (`ramen_nights_ultimate_save`) with non-destructive fallback deserialization.
+- **Mobile Container**: Native Android & Amazon Kindle Fire OS support via Capacitor 8.
+
+## Key Files & Links
+- [Main Application](index.html): Single-page game container and retro HUD.
+- [Web App Manifest](manifest.json): PWA configuration and standalone launcher settings.
+- [Service Worker](sw.js): Cache-first offline worker.
+- [Robots Directives](robots.txt): Crawler rules and sitemap discovery.
+- [Cover Art](cover.png): 1200x630 pixel art promotional cover and OpenGraph banner.

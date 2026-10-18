@@ -13,6 +13,113 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="apple-touch-icon" href="./icon-192.png" />
     <link rel="icon" type="image/png" href="./icon-192.png" />
+
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ramen Nights & Budget Bites" />
+    <meta property="og:description" content="A JRPG-styled idle clicker & culinary management simulation set at Tokyo Hodai University. Expand your ramen empire across Tokyo to graduate from Economics 301!" />
+    <meta property="og:image" content="./cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ramen Nights & Budget Bites - Pixel Art JRPG Ramen Stall in Tokyo" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ramen Nights & Budget Bites" />
+    <meta name="twitter:description" content="A JRPG-styled idle clicker & culinary management simulation set at Tokyo Hodai University. Expand your ramen empire across Tokyo to graduate from Economics 301!" />
+    <meta name="twitter:image" content="./cover.png" />
+    <meta name="twitter:image:alt" content="Ramen Nights & Budget Bites Game Cover Art" />
+
+    <!-- JSON-LD Structured Data: Schema.org VideoGame & WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "VideoGame",
+          "@id": "#game",
+          "name": "Ramen Nights & Budget Bites",
+          "alternateName": "Ramen Nights",
+          "description": "A JRPG-styled idle clicker and culinary management simulation set at Tokyo Hodai University. Master broth recipes, hire classmate staff, upgrade your kitchen hardware, and conquer Tokyo districts from Hongo to Ginza Palace to graduate.",
+          "genre": [
+            "Idle Clicker",
+            "Simulation",
+            "JRPG",
+            "Management",
+            "Incremental Game"
+          ],
+          "gamePlatform": [
+            "Web Browser",
+            "Progressive Web App",
+            "Android",
+            "Amazon Kindle Fire OS"
+          ],
+          "applicationCategory": "Game",
+          "operatingSystem": "Any modern web browser, Android, Fire OS",
+          "inLanguage": "en",
+          "image": "./cover.png",
+          "screenshot": "./cover.png",
+          "playMode": "SinglePlayer",
+          "numberOfPlayers": {
+            "@type": "QuantitativeValue",
+            "value": 1
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Tokyo Hodai University Economics 301 Lab"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Ramen Nights Studio"
+          },
+          "character": [
+            {
+              "@type": "Person",
+              "name": "Haruto",
+              "jobTitle": "Engineering Partner",
+              "description": "Study partner who automates noodle cooking and heat calibration."
+            },
+            {
+              "@type": "Person",
+              "name": "Aoi",
+              "jobTitle": "Chemistry Prodigy",
+              "description": "Formulates molecular tare reactions and umami salt concentrations."
+            },
+            {
+              "@type": "Person",
+              "name": "Professor X",
+              "jobTitle": "Economics 301 Instructor",
+              "description": "The eccentric professor whose course requires scaling a profitable noodle business."
+            }
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "#webapp",
+          "name": "Ramen Nights & Budget Bites",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "All modern browsers",
+          "browserRequirements": "Requires JavaScript, HTML5 Canvas, and modern Web APIs",
+          "installUrl": "./manifest.json",
+          "featureList": [
+            "Deterministic 1000ms idle tick engine",
+            "20 researchable ramen broth recipes",
+            "10 recruitable university classmate staff tiers",
+            "4 Tokyo ascension districts: Hongo, Shibuya, Shinjuku, Ginza",
+            "15 dynamic weather patterns and day/night synergy boosts",
+            "Offline-first PWA with Service Worker local caching"
+          ],
+          "image": "./cover.png"
+        }
+      ]
+    }
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet" />

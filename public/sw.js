@@ -2,7 +2,8 @@ const CACHE_NAME = 'ramen-nights-v2';
 const URLS_TO_CACHE = [
   './',
   './index.html',
-  './manifest.json'
+  './manifest.json',
+  './cover.png'
 ];
 
 self.addEventListener('install', (event) => {
